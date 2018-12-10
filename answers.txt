@@ -1,0 +1,48 @@
+Find all the robots from Star Wars.
+
+Find the robot with an "anxious" personality.
+
+Find all recipes that are nut free.
+
+Count the number of recipes that are gluten free but not vegetarian.
+
+Find the animal with the most legs.
+
+
+
+
+
+
+
+
+
+
+
+SELECT name FROM robots WHERE source='Star Wars';
+ C3P0
+ R2D2
+ (2 rows)
+
+SELECT name FROM robots WHERE personality='anxious';
+ C3P0
+ (1 row)
+
+SELECT name FROM recipes WHERE nut_free=true;
+ Butternut Squash Bake
+ Vegetarian Bibimbap
+ French Veggie Loaf
+ Quinoa and Black Beans
+ Juicy Roasted Chicken
+ Garlic Green Beans
+ Stout Slow Cooker Corned Beef and Veggies
+ (7 rows)
+
+4:
+SELECT COUNT(name) FROM recipes WHERE gluten_free=true AND vegetarian=false;
+ 2
+ (1 row)
+
+5:
+SELECT MAX(number_of_legs) FROM animals;
+SELECT name FROM animals WHERE number_of_legs=8;
+Octopus
